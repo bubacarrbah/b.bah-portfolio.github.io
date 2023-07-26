@@ -16,11 +16,12 @@ section{
     border-radius: 14px;
 }
 nav {
-     /* width: 5%; */
-     width: 220px;
+     width: 5%;
+     /* width: 220px; */
      height: 100%;
      background-color: #3f3f3f;
      float: left;
+     transition: 0.3s ease-in-out;
      position: absolute;
 }
 ul { 
@@ -41,6 +42,7 @@ li a {
     color: white;
 
 }
+
 main{
     width: 85%;
 }
@@ -50,5 +52,37 @@ main header{
 }
 main header a {
     padding: 0 5px;
-    margin: o 15px;
+    margin: 0 15px;
 }
+.toggle-nav{
+    position: absolute;
+    top: 10px;
+    left: 20%;
+}
+#open{
+    display: none;
+}
+label .fa-times{
+    display: none;
+}
+
+input.checkbox-nav:checked ~ nav{
+    width: 20%;
+}  
+
+input.checkbox-nav:checked ~ label .fa-times{
+    display: inline-block;
+}                                            
+                                        
+input.checkbox-nav:checked ~ label .fa-bars{
+    display: none;
+}
+
+input.checkbox-nav:checked ~ label .fa-bars{
+    display: none;
+}
+input.checkbox-nav:checked ~ .toggle-nav{
+    left: 20%;
+}
+    
+
